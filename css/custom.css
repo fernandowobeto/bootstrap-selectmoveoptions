@@ -1,0 +1,17 @@
+.prettyprint.linenums {
+    box-shadow: 60px 0 0 #FBFBFC inset, 61px 0 0 #ECECF0 inset;
+}
+
+.prettyprint {
+    background-color: #F7F7F9 !important;
+    border: 1px solid #E1E1E8 !important;
+}
+
+.prettyprint ol li{
+	 background-color: #F7F7F9 !important;
+	 list-style-type: decimal !important;
+}
+
+ol.linenums {
+    margin: 0 0 0 37px;
+}
