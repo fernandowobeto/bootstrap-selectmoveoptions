@@ -1,199 +1,224 @@
 <!DOCTYPE html>
 <html>
-	 <head>
-			<meta charset='utf-8' />
-			<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-			<meta name="description" content="jQuery SelectMoveOptions para Bootstrap : mova options entre selects" />
-			<script src="js/jquery.js"></script>
-			<script src="js/bootstrap-selectmoveoptions.js"></script>
-			<script src="bootstrap/js/bootstrap.min.js"></script>
-			<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-			<link rel="stylesheet" href="css/custom.css">
-			<link rel="stylesheet" href="google-code-prettify/prettify.css">
-			<title>jQuery SelectMoveOptions para Bootstrap</title>
-			<style type="text/css">
-				 body {
-						padding-top: 20px;
-						padding-bottom: 60px;
-				 }
+	<head>
+		<meta charset='utf-8' />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<meta name="description" content="jQuery SelectMoveOptions para Bootstrap : mova options entre selects" />
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap-selectmoveoptions.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="google-code-prettify/prettify.css">
+		<title>jQuery SelectMoveOptions para Bootstrap</title>
+		<style type="text/css">
+			body {
+				padding-top: 20px;
+				padding-bottom: 60px;
+			}
 
-				 /* Custom container */
-				 .container {
-						margin: 0 auto;
-						max-width: 1000px;
-				 }
-				 .container > hr {
-						margin: 60px 0;
-				 }
+			/* Custom container */
+			.container {
+				margin: 0 auto;
+				max-width: 1000px;
+			}
+			.container > hr {
+				margin: 60px 0;
+			}
 
-				 /* Main marketing message and sign up button */
-				 .jumbotron {
-						margin: 80px 0;
-						text-align: center;
-				 }
-				 .jumbotron h1 {
-						font-size: 100px;
-						line-height: 1;
-				 }
-				 .jumbotron .lead {
-						font-size: 24px;
-						line-height: 1.25;
-				 }
-				 .jumbotron .btn {
-						font-size: 21px;
-						padding: 14px 24px;
-				 }
-				 /* Supporting marketing content */
-				 .marketing {
-						margin: 60px 0;
-				 }
-				 .marketing p + h4 {
-						margin-top: 28px;
-				 }
+			/* Main marketing message and sign up button */
+			.jumbotron {
+				margin: 80px 0;
+				text-align: center;
+			}
+			.jumbotron h1 {
+				font-size: 100px;
+				line-height: 1;
+			}
+			.jumbotron .lead {
+				font-size: 24px;
+				line-height: 1.25;
+			}
+			.jumbotron .btn {
+				font-size: 21px;
+				padding: 14px 24px;
+			}
+			/* Supporting marketing content */
+			.marketing {
+				margin: 60px 0;
+			}
+			.marketing p + h4 {
+				margin-top: 28px;
+			}
 
-				 /* Customize the navbar links to be fill the entire space of the .navbar */
-				 .navbar .navbar-inner {
-						padding: 0;
-				 }
-				 .navbar .nav {
-						margin: 0;
-						display: table;
-						width: 100%;
-				 }
-				 .navbar .nav li {
-						display: table-cell;
-						width: 1%;
-						float: none;
-				 }
-				 .navbar .nav li a {
-						font-weight: bold;
-						text-align: center;
-						border-left: 1px solid rgba(255,255,255,.75);
-						border-right: 1px solid rgba(0,0,0,.1);
-				 }
-				 .navbar .nav li:first-child a {
-						border-left: 0;
-						border-radius: 3px 0 0 3px;
-				 }
-				 .navbar .nav li:last-child a {
-						border-right: 0;
-						border-radius: 0 3px 3px 0;
-				 }
-			</style>
-	 </head>
-	 <body>
-			<div id="fb-root"></div>
-			<script>
-				 (function(d, s, id) {
-						var js, fjs = d.getElementsByTagName(s)[0];
-						if (d.getElementById(id))
-							 return;
-						js = d.createElement(s);
-						js.id = id;
-						js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
-						fjs.parentNode.insertBefore(js, fjs);
-				 }(document, 'script', 'facebook-jssdk'));
-			</script>		 
-			<div class="container">
-				 <div class="masthead">
-						<h3 class="muted">jQuery SelectMoveOptions</h3>
-						<div class="navbar span7 pull-right">
-							 <div class="navbar-inner">
-									<div class="container">
-										 <ul class="nav">
-												<li><a href="https://github.com/fernandowobeto/bootstrap-selectmoveoptions/zipball/master" target="_blank">Download</a></li>
-												<li><a href="https://github.com/fernandowobeto/bootstrap-selectmoveoptions" target="_blank">Projeto no Github</a></li>
-												<li><a href="http://www.fernandowobeto.com" target="_blank">Autor Blog</a></li>
-										 </ul>
-									</div>
-							 </div>
-						</div><!-- /.navbar -->
-				 </div>
-				 <!-- Jumbotron -->
-				 <div class="jumbotron">
-						<h1>jQuery SelectMoveOptions</h1>
-						<p class="lead">Mova options entre selects HTML com este plugin jQuery com estilização Bootstrap.</p>
-						<a class="btn btn-large btn-success" href="https://github.com/fernandowobeto/bootstrap-selectmoveoptions/zipball/master" target="_blank">Download (3.1kb)</a>
-				 </div>
-				 <div>
-						<div class="span2">
-							 <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-							 <script>!function(d, s, id) {
-										 var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-										 if (!d.getElementById(id)) {
-												js = d.createElement(s);
-												js.id = id;
-												js.src = p + '://platform.twitter.com/widgets.js';
-												fjs.parentNode.insertBefore(js, fjs);
-										 }
-									}(document, 'script', 'twitter-wjs');</script>
+			/* Customize the navbar links to be fill the entire space of the .navbar */
+			.navbar .navbar-inner {
+				padding: 0;
+			}
+			.navbar .nav {
+				margin: 0;
+				display: table;
+				width: 100%;
+			}
+			.navbar .nav li {
+				display: table-cell;
+				width: 1%;
+				float: none;
+			}
+			.navbar .nav li a {
+				font-weight: bold;
+				text-align: center;
+				border-left: 1px solid rgba(255,255,255,.75);
+				border-right: 1px solid rgba(0,0,0,.1);
+			}
+			.navbar .nav li:first-child a {
+				border-left: 0;
+				border-radius: 3px 0 0 3px;
+			}
+			.navbar .nav li:last-child a {
+				border-right: 0;
+				border-radius: 0 3px 3px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id))
+					return;
+				js = d.createElement(s);
+				js.id = id;
+				js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>		 
+		<div class="container">
+			<div class="masthead">
+				<h3 class="muted">jQuery SelectMoveOptions</h3>
+				<div class="navbar span7 pull-right">
+					<div class="navbar-inner">
+						<div class="container">
+							<ul class="nav">
+								<li><a href="https://github.com/fernandowobeto/bootstrap-selectmoveoptions/zipball/master" target="_blank">Download</a></li>
+								<li><a href="https://github.com/fernandowobeto/bootstrap-selectmoveoptions" target="_blank">Projeto no Github</a></li>
+								<li><a href="http://www.fernandowobeto.com" target="_blank">Autor Blog</a></li>
+							</ul>
 						</div>
-						<div class="span4">
-							 <div class="fb-like" data-href="http://fernandowobeto.github.io/bootstrap-selectmoveoptions" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
-						</div>				 
-				 </div>
-				 <hr>
-				 <!-- Example row of columns -->
-				 <div class="row-fluid">
-						<div class="span4">
-							 <h2>Descrição</h2>
-							 <p>
-									O <strong>jQuery SelectMoveOptions</strong> é um plugin desenvolvido utilizando o <strong>jQuery</strong> com a estilização usando as classes disponíveis no <strong>Twitter Bootstrap</strong>, onde você pode mover options entre dois selects HTML utilizando o duplo click em cada options ou utilizando as setas de controle.
-							 </p>
-						</div>
-						<div class="span4">
-							 <h2>Instalação</h2>
-							 <p>Inclua o arquivo bootstrap-selectmoveoptions.js em seu código html.</p>
-							 <p>&lt;script src=&quot;<strong>js/bootstrap-selectmoveoptions.js</strong>&quot;&gt; &lt;/script&gt;</p>
-						</div>
-						<div class="span4">
-							 <h2>Dependências</h2>
-							 <p><a href="http://jquery.com/" target="_blank">jQuery</a></p>
-							 <p><a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a></p>
-						</div>
-				 </div>
-				 <hr>
-				 <div>
-						<h3>Utilização</h3>
-				 </div>
-				 <div>
-						<pre id="exemplo-utilizacao" class="prettyprint linenums"></pre>						
-				 </div>
-				 <hr>
-				 <div>
-						<h3>Exemplo</h3>
-				 </div>
-				 <form class="form-horizontal well">
-						<fieldset>
-							 <div class="control-group">
-									<div id="div-area-move-options">
-										 <select multiple>
-												<option value="1">Brasil</option>
-												<option value="2">Argentina</option>
-												<option value="3">Uruguai</option>
-												<option value="4">Chile</option>
-												<option value="5">Paraguai</option>
-										 </select>
-										 <select multiple></select>
-									</div>
-							 </div>							 
-						</fieldset>
-				 </form>
-				 <hr>
-				 <div>
-						<h3>Reporte de Bugs</h3>
-				 </div>
-				 <div>
-						<p>
-							 <a href="mailto:contato@fernandowobeto.com">contato@fernandowobeto.com</a>
-						</p>
-				 </div>
-				 <hr>
-				 <div class="footer">
-						<p>jQuery SelectMoveOptions - 2013 - Desenvolvido por Fernando Wobeto</p>
-				 </div>
+					</div>
+				</div><!-- /.navbar -->
 			</div>
-			<script src="google-code-prettify/prettify.js"></script>
-			<script src="js/js.js"></script>
-	 </body>
+			<!-- Jumbotron -->
+			<div class="jumbotron">
+				<h1>jQuery SelectMoveOptions</h1>
+				<p class="lead">Mova options entre selects HTML com este plugin jQuery com estilização Bootstrap.</p>
+				<a class="btn btn-large btn-success" href="https://github.com/fernandowobeto/bootstrap-selectmoveoptions/zipball/master" target="_blank">Download (3.1kb)</a>
+			</div>
+			<div>
+				<div class="span2">
+					<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+					<script>!function(d, s, id) {
+							var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+							if (!d.getElementById(id)) {
+								js = d.createElement(s);
+								js.id = id;
+								js.src = p + '://platform.twitter.com/widgets.js';
+								fjs.parentNode.insertBefore(js, fjs);
+							}
+						}(document, 'script', 'twitter-wjs');</script>
+				</div>
+				<div class="span4">
+					<div class="fb-like" data-href="http://fernandowobeto.github.io/bootstrap-selectmoveoptions" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+				</div>				 
+			</div>
+			<hr>
+			<!-- Example row of columns -->
+			<div class="row-fluid">
+				<div class="span4">
+					<h2>Descrição</h2>
+					<p>
+						O <strong>jQuery SelectMoveOptions</strong> é um plugin desenvolvido utilizando o <strong>jQuery</strong> com a estilização usando as classes disponíveis no <strong>Twitter Bootstrap</strong>, onde você pode mover options entre dois selects HTML utilizando o duplo click em cada options ou utilizando as setas de controle.
+					</p>
+				</div>
+				<div class="span4">
+					<h2>Instalação</h2>
+					<p>Inclua o arquivo bootstrap-selectmoveoptions.js em seu código html.</p>
+					<p>&lt;script src=&quot;<strong>js/bootstrap-selectmoveoptions.js</strong>&quot;&gt; &lt;/script&gt;</p>
+				</div>
+				<div class="span4">
+					<h2>Dependências</h2>
+					<p><a href="http://jquery.com/" target="_blank">jQuery</a></p>
+					<p><a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a></p>
+				</div>
+			</div>
+			<hr>
+			<div>
+				<h3>Opções</h3>
+			</div>	
+			<div>
+				<table class="table table-bordered table-striped">
+					<tr>
+						<td>height</td>
+						<td><i>string</i></td>
+						<td>Altura em pixels dos selects (ex: '250px')</td>
+					</tr>
+					<tr>
+						<td>disableFirst</td>
+						<td><i>boolean</i></td>
+						<td>Desabilita o primeiro select. Nenhum option pode ser removido do mesmo</td>
+					</tr>
+					<tr>
+						<td>disableLast</td>
+						<td><i>boolean</i></td>
+						<td>Desabilita o primeiro select. Nenhum option pode ser removido do mesmo</td>
+					</tr>
+				</table>
+			</div>			
+			<hr>
+			<div>
+				<h3>Utilização</h3>
+			</div>
+			<div>
+				<pre id="exemplo-utilizacao" class="prettyprint linenums"></pre>						
+			</div>
+			<p>Utilização do plugin com as opções:</p>
+			<pre id="exemplo-utilizacao-opcoes" class="prettyprint linenums"></pre>		
+			<hr>
+			<div>
+				<h3>Exemplo</h3>
+			</div>
+			<form class="form-horizontal well">
+				<fieldset>
+					<div class="control-group">
+						<div id="div-area-move-options">
+							<select multiple>
+								<option value="1">Brasil</option>
+								<option value="2">Argentina</option>
+								<option value="3">Uruguai</option>
+								<option value="4">Chile</option>
+								<option value="5">Paraguai</option>
+							</select>
+							<select multiple></select>
+						</div>
+					</div>							 
+				</fieldset>
+			</form>
+			<hr>
+			<div>
+				<h3>Reporte de Bugs</h3>
+			</div>
+			<div>
+				<p>
+					<a href="mailto:contato@fernandowobeto.com">contato@fernandowobeto.com</a>
+				</p>
+			</div>
+			<hr>
+			<div class="footer">
+				<p>jQuery SelectMoveOptions - 2013 - Desenvolvido por Fernando Wobeto</p>
+			</div>
+		</div>
+		<script src="google-code-prettify/prettify.js"></script>
+		<script src="js/js.js"></script>
+	</body>
 </html>

@@ -20,6 +20,13 @@ $(document).ready(function() {
 
 	$('#exemplo-utilizacao').text(exemplo);
 	
+	var exemplo_options = '$("#div-area-selects").selectMoveOptions({'+"\n"+
+								 '    height: "250px",'+"\n"+
+								 '    disableFirst: true'+"\n"+
+								 '});	';
+	
+	$('#exemplo-utilizacao-opcoes').text(exemplo_options);
+	
 	prettyPrint();
 	
 	$('#div-area-move-options').selectMoveOptions();
