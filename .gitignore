@@ -1,3 +1,4 @@
-nbproject/*
-bootstrap/*
+nbproject
+libs
 index.html
+js.js
