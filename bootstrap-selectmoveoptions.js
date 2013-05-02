@@ -1,3 +1,9 @@
+/* 
+ * Bootstrap SelectMoveOptions - v1.0 - 30/04/2013
+ * https://github.com/fernandowobeto/bootstrap-selectmoveoptions
+ * Copyright (c) 2013 Fernando Wobeto; Licensed MIT 
+ */
+
 (function($) {
 	$.fn.selectMoveOptions = function(options) {
 		$(this).each(function() {
